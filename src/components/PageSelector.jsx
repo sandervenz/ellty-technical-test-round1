@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './PageSelector.css';
 
 const PageSelector = () => {
   const pages = ['Page 1', 'Page 2', 'Page 3', 'Page 4'];
-  const [selectedPages, setSelectedPages] = useState([0]); // Page 1 selected by default
+  const [selectedPages, setSelectedPages] = useState([0]);
 
   const handleCheckboxChange = (index) => {
     if (index === -1) {
-      // "All pages" clicked
       if (selectedPages.length === pages.length) {
-        setSelectedPages([]); // Deselect all
+        setSelectedPages([]);
       } else {
-        setSelectedPages(pages.map((_, i) => i)); // Select all
+        setSelectedPages(pages.map((_, i) => i));
       }
     } else {
       // Individual page clicked
@@ -24,7 +23,6 @@ const PageSelector = () => {
   };
 
   const isAllSelected = selectedPages.length === pages.length;
-  const isSomeSelected = selectedPages.length > 0 && selectedPages.length < pages.length;
 
   return (
     <div className="page-selector">

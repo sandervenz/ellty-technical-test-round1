@@ -1,4 +1,3 @@
-import React from 'react';
 import PageSelector from './components/PageSelector';
 import './App.css';
 
