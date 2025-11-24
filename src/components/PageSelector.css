@@ -1,0 +1,153 @@
+.page-selector-container {
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  min-width: 320px;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E8E8E8;
+}
+
+.header-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1A1A1A;
+}
+
+/* Button variant specific styles */
+.button-variant {
+  min-width: 320px;
+}
+
+.button-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.button-list .done-button {
+  width: 100%;
+  height: 48px;
+  background: #FFC841;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1A1A1A;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button-list .done-button:hover {
+  background: #FFB800;
+}
+
+.button-list .done-button:active {
+  background: #F0A800;
+}
+
+/* Desktop and Home variants */
+.desktop-variant,
+.home-variant {
+  min-width: 340px;
+}
+
+.pages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 20px;
+}
+
+.page-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #F5F5F5;
+  transition: background-color 0.15s ease;
+}
+
+.page-item:hover {
+  background-color: #FAFAFA;
+  margin: 0 -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.page-item:first-child {
+  font-weight: 500;
+}
+
+.page-label {
+  font-size: 15px;
+  color: #1A1A1A;
+  user-select: none;
+}
+
+/* Checkbox styles */
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #D0D0D0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  background: #FFFFFF;
+}
+
+.checkbox:hover {
+  border-color: #4A90E2;
+}
+
+.checkbox.checked {
+  background: #4A90E2;
+  border-color: #4A90E2;
+}
+
+.checkbox.indeterminate {
+  background: #4A90E2;
+  border-color: #4A90E2;
+}
+
+/* Done button at bottom */
+.done-button-bottom {
+  width: 100%;
+  height: 48px;
+  background: #FFC841;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1A1A1A;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 8px;
+}
+
+.done-button-bottom:hover {
+  background: #FFB800;
+}
+
+.done-button-bottom:active {
+  background: #F0A800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-selector-container {
+    min-width: 280px;
+  }
+}
