@@ -1,153 +1,130 @@
-.page-selector-container {
+.page-selector {
   background: #FFFFFF;
-  border-radius: 12px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 20px;
-  min-width: 320px;
-}
-
-/* Header styles */
-.header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #E8E8E8;
-}
-
-.header-title {
-  font-size: 14px;
-  font-weight: 500;
-  color: #1A1A1A;
-}
-
-/* Button variant specific styles */
-.button-variant {
-  min-width: 320px;
-}
-
-.button-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.button-list .done-button {
-  width: 100%;
-  height: 48px;
-  background: #FFC841;
-  border: none;
   border-radius: 8px;
-  font-size: 15px;
-  font-weight: 500;
-  color: #1A1A1A;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.button-list .done-button:hover {
-  background: #FFB800;
-}
-
-.button-list .done-button:active {
-  background: #F0A800;
-}
-
-/* Desktop and Home variants */
-.desktop-variant,
-.home-variant {
-  min-width: 340px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 16px 20px 20px 20px;
+  width: 370px;
+  border: 1px solid #E8E8E8;
 }
 
 .pages-list {
   display: flex;
   flex-direction: column;
   gap: 0;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .page-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
-  cursor: pointer;
-  border-bottom: 1px solid #F5F5F5;
+  padding: 12px 0;
+  border-bottom: none;
   transition: background-color 0.15s ease;
-}
-
-.page-item:hover {
-  background-color: #FAFAFA;
-  margin: 0 -20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  cursor: pointer;
 }
 
 .page-item:first-child {
-  font-weight: 500;
+  border-bottom: 0.7px solid #CDCDCD;
+  padding-bottom: 12px;
+  margin-bottom: 4px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.page-item:last-child {
+  border-bottom: none;
+}
+
+.page-item:hover .checkbox {
+  border-color: #BDBDBD;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.page-item:hover .checkbox.checked {
+  border-color: #5087F8;
+  box-shadow: none;
 }
 
 .page-label {
-  font-size: 15px;
-  color: #1A1A1A;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1F2128;
   user-select: none;
+  line-height: 1.5;
 }
 
 /* Checkbox styles */
 .checkbox {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #D0D0D0;
-  border-radius: 4px;
+  width: 23px;
+  height: 23px;
+  border: 1px solid #CDCDCD;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
   flex-shrink: 0;
   background: #FFFFFF;
+  cursor: pointer;
 }
 
 .checkbox:hover {
-  border-color: #4A90E2;
+  border-color: #BDBDBD;
 }
 
 .checkbox.checked {
-  background: #4A90E2;
-  border-color: #4A90E2;
+  background: #2469F6;
+  border-color: #2469F6;
+  border-radius: 6px;
 }
 
-.checkbox.indeterminate {
-  background: #4A90E2;
-  border-color: #4A90E2;
+.checkbox.checked:hover {
+  background: #5087F8;
+  border-color: #5087F8;
 }
 
-/* Done button at bottom */
-.done-button-bottom {
+.page-item:hover .checkbox.checked {
+  background: #5087F8;
+  border-color: #5087F8;
+  box-shadow: none;
+}
+
+/* Done button */
+.done-button {
   width: 100%;
-  height: 48px;
-  background: #FFC841;
+  height: 40px;
+  background: #FFCE22;
   border: none;
-  border-radius: 8px;
-  font-size: 15px;
+  border-radius: 4px;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
   font-weight: 500;
-  color: #1A1A1A;
+  color: #1F2128;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  margin-top: 8px;
+  box-shadow: none;
+  margin-top: 16px;
+  padding: 10px 20px;
+  position: relative;
 }
 
-.done-button-bottom:hover {
-  background: #FFB800;
+.done-button::before {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 0.7px;
+  background-color: #CDCDCD;
 }
 
-.done-button-bottom:active {
-  background: #F0A800;
+.done-button:hover {
+  background: #FFD84D;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .page-selector-container {
-    min-width: 280px;
-  }
+.done-button:active {
+  background: #FFD84D;
+  transform: translateY(1px);
 }

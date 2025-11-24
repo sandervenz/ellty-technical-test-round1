@@ -1,5 +1,6 @@
 .app {
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  background-color: #E5E5E5;
 }
